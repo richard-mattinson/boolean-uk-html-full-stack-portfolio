@@ -1,0 +1,217 @@
+/* GLOBAL */
+
+a, a:hover, a:focus, a:active, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --redPrimary: rgb(117, 19, 20);
+    --redSecondary: rgb(156, 67, 69);
+    --redTertiary: rgb(240, 215, 215);
+    
+    --thirtyPadding: 0% 30%;
+    --twentyPadding: 0% 20%;
+    --tenPadding: 0% 10%;
+}
+
+/* GLOBAL */
+
+/* COVER */
+
+.cover {
+    background: var(--redPrimary);
+    color: var(--redTertiary);
+}
+.navigation {
+    display: grid;
+    grid-template-columns: 3fr repeat(3, 1fr);
+    height:6vw;
+    padding: 1%;
+}
+
+.name {
+    display: flex;
+    place-items: center;
+    font-size: 2rem;
+    padding-left: 2%;
+}
+
+.shortAbout,
+.shortPortfolio,
+.shortExperience {
+    border: var(--redPrimary);
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    font-size: 1.2rem;
+    background: var(--redTertiary);
+    color: var(--redPrimary);
+}
+
+.shortAbout a:hover,
+.shortPortfolio a:hover,
+.shortExperience a:hover {
+    transform: scale(1.3);
+    color: var(--redSecondary);
+}
+
+.headline, 
+.strapline {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    padding: var(--thirtyPadding)
+}
+
+p.strapline {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 2% 40%;
+}
+
+/* COVER END*/
+
+/* ABOUT ME */
+
+h2 {
+    font-size: 3rem;
+    padding: 2% 30%;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+    padding: var(--thirtyPadding)
+}
+
+p.introText {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 2% 30%;
+}
+.langauges {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2% 30%;
+    place-items: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+/* ABOUT ME END*/
+
+/* PORTFOLIO */
+
+.portfolio {
+    background: var(--redTertiary);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    padding: var(--thirtyPadding);
+    padding-bottom: 2%;
+}
+
+.card {
+    border: solid 5px var(--redPrimary);
+    border-radius: 5px;
+    background-color: white;
+    margin: 5%;
+    height: 400px;
+    padding: 2%;
+
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr 1fr;
+}
+
+.cardText {
+    margin: 2%;
+}
+
+.readMore {
+    background: var(--redPrimary);
+    color: var(--redTertiary);
+    display: flex;
+    place-items: center;
+    place-content: center;
+    height: 30px;
+    margin: 5% 0%;
+}
+
+.git {
+    color: var(--redPrimary);
+    text-align: center;
+    margin: 5% 0%;
+}
+
+/* PORTFOLIO END */
+
+/* EXPERIENCE */
+
+.experience h3 {
+    margin: 2% 0%;
+}
+
+p.jobText {
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: var(--thirtyPadding)
+}
+
+/* EXPERIENCE END  */
+
+/* COPYRIGHT */
+
+.experience {
+    margin: 2% 0%;
+}
+
+footer {
+    background: var(--redPrimary);
+    height: 50px;
+    color: white;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* COPYRIGHT END */
+
+@media screen and (max-width: 1200px) {
+    p.strapline {
+        padding: 2% 25%;
+    }
+
+    var--thirtyPadding {
+        var(--twentyPadding): 0% 20%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    p.strapline {
+        padding: 2% 20%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    p.strapline {
+        padding: 2% 10%;
+    }
+}
+
+
+
