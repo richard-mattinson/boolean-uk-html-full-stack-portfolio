@@ -23,13 +23,13 @@ a, a:hover, a:focus, a:active, a:visited {
     --tenPadding: 0% 10%;
 }
 
-/* GLOBAL */
+/* GLOBAL ENDS */
 
 /* COVER */
 
 .cover {
     background: var(--redPrimary);
-    color: var(--redTertiary);
+    color: var(--redPrimary);
     padding-bottom: 100px;
     height: 100vh
 }
@@ -46,6 +46,7 @@ a, a:hover, a:focus, a:active, a:visited {
     place-items: center;
     font-size: 2rem;
     padding-left: 2%;
+    color: var(--redTertiary);
 }
 
 .shortAbout,
@@ -62,16 +63,34 @@ a, a:hover, a:focus, a:active, a:visited {
     color: var(--redPrimary);
 }
 
-.shortAbout a:hover,
-.shortPortfolio a:hover,
-.shortExperience a:hover {
+.shortAbout:hover,
+.shortPortfolio:hover,
+.shortExperience:hover {
     transform: scale(1.2);
-    color: var(--redSecondary);
+    color: var(--redTertiary);
+    background: var(--redSecondary);
+}
+
+.shortAbout :not(:hover),
+.shortPortfolio :not(:hover), 
+.shortExperience :not(:hover) {
+    background: var(--redTertiary);
+    color: var(--redPrimary);
+} 
+
+.toTop {
+    color: var(--redTertiary);
+}
+
+.toTop a:hover {
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 .headline, 
 .strapline {
     text-align: center;
+    color: var(--redTertiary);
 }
 
 h1 {
@@ -83,6 +102,14 @@ p.strapline {
     font-size: 1.5rem;
     line-height: 2rem;
     padding: 2% 40%;
+}
+
+.toTop {
+    position: fixed;
+    margin-left: 88vw;
+    margin-top: 60vh;
+    background-color: var(--redPrimary);
+    padding: 2%;
 }
 
 /* COVER END*/
@@ -98,7 +125,12 @@ h2 {
 
 h3 {
     font-size: 2rem;
-    padding: var(--thirtyPadding)
+    padding: var(--thirtyPadding);
+}
+
+h4 {
+    font-size: 2rem;
+    text-align: center;
 }
 
 p.introText {
@@ -157,17 +189,27 @@ p.introText {
 .readMore {
     background: var(--redPrimary);
     color: var(--redTertiary);
+    text-transform: uppercase;
     display: flex;
     place-items: center;
     place-content: center;
-    height: 30px;
+    height: 40px;
     margin: 5% 0%;
+}
+
+a.readMore {
+    color: var(--redTertiary);
+}
+
+.readMore:hover {
+    background: var(--redTertiary);
+    color: var(--redPrimary);
+    font-weight: 700;
 }
 
 .git {
     color: var(--redPrimary);
     text-align: center;
-    margin: 5% 0%;
 }
 
 .git a:hover {
