@@ -129,8 +129,9 @@ p.introText {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    padding: var(--thirtyPadding);
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    padding: var(--tenPadding);
 }
 
 .card {
@@ -223,7 +224,6 @@ footer {
     }
 
     h1, h2, h3, 
-    .cards, 
     p.jobText, 
     p.introText,
     .langauges {
@@ -244,16 +244,11 @@ footer {
     }
 
     h1, h2, h3, 
-    .cards, 
     p.jobText, 
     p.introText,
     .langauges {
         padding: var(--tenPadding);
     }
-
-    /* .cards {
-        display: inline-block;
-    } */
 }
 
 @media screen and (max-width: 600px) {
@@ -268,10 +263,6 @@ footer {
     
     .name {
         font-size: 1.5rem;
-    }
-
-    .cards {
-        padding: 0%;
     }
 }
 
